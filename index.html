@@ -16,10 +16,13 @@
 <link rel="stylesheet" href="./css/bootstrap.min.css"/>
 <link rel="stylesheet" href="./css/index.css"/>
 
+
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
 <script src="./js/jquery.scrollTo.min.js"></script>
+
+<script src="./js/jquery.arctext.js"></script>
 
 
 <style>
@@ -35,7 +38,12 @@ $("button").on("click",function(){
 	$.scrollTo("#" + $(this).val(),500);
 });
 
-//$(".title").arctext({radius:500});
+$(".title").arctext({radius:500});
+
+    $("#rssUpdater").load("rssfeed.php"); // Grab the data on page-load
+    var auto_refresh = setInterval(function(){
+        $('#rssUpdater').fadeOut('slow').load('rssfeed.php').fadeIn("slow");
+    }, 10000); // Adjust this to the time interval you'd like between refreshes in milliseconds
 
 });
 
@@ -79,19 +87,35 @@ $("button").on("click",function(){
     </div>	
 
     <div class="btn-group-vertical btn-group-lg" style="max-width:100px;margin-left:40px;margin-top:50px;">
-        <button value="div1" class="btn btn-primary">Home</button>
-        <button value="div2" class="btn btn-primary">See More</button>
-        <button value="div3" class="btn btn-primary">About Us</button>
-        <button value="div4" class="btn btn-primary">Our Coffee</button>
-        <button value="div5" class="btn btn-primary">Contact</button>
+        <button value="home" class="btn btn-primary">Home</button>
+        <button value="SeeMore" class="btn btn-primary">See More</button>
+        <button value="AboutUs" class="btn btn-primary">About Us</button>
+        <button value="OurCoffee" class="btn btn-primary">Our Coffee</button>
+        <button value="Contact" class="btn btn-primary">Contact</button>
     </div>
 	
 </div>
 
+<div class="pull-right leftmenu" style="height:50%;right:0px;background-color:rgba(0, 0, 0, 0.8);">
 
-<div id="div1" class="fulldiv" style="background-image:url('./images/backs/IMG_0638.JPG');">
+   <h1 style="color:white;">Latest News</h1>
+
+    <div id="updateContainer">
+    
+        <!-- BEGIN Autoupdater Markup -->
+        <div id="rssUpdater"></div>
+        <!-- END Autoupdater Markup -->
+        
+    </div>
+
+ 
+</div>
+
+
+<div id="home" class="fulldiv" style="background-image:url('./images/backs/IMG_0763_2.JPG');">
 
   	
+
 
     	
     	<!--
@@ -129,7 +153,7 @@ $("button").on("click",function(){
 </div>
 
 
-<div id="div2" style="background-image:url('./images/backs/IMG_0748.JPG')" class="fulldiv">
+<div id="SeeMore" style="background-image:url('./images/backs/IMG_0748.JPG')" class="fulldiv">
 
 	<div class="container">
 
@@ -167,7 +191,7 @@ $("button").on("click",function(){
 
 </div>
 
-<div id="div3" style="background-image:url('./images/backs/IMG_0738.JPG');" class="fulldiv">
+<div id="AboutUs" style="background-image:url('./images/backs/IMG_0738.JPG');" class="fulldiv">
 	<div class="container">
 
 
@@ -189,7 +213,7 @@ $("button").on("click",function(){
 </div>
 
 
-<div id="div4" style="background-image:url('./images/backs/IMG_0744.JPG');" class="fulldiv">
+<div id="OurCoffee" style="background-image:url('./images/backs/IMG_0744.JPG');" class="fulldiv">
     <div class="container">
         <div class="row-fluid">
         	<div class="col-md-8 col-md-offset-2" style="margin-top:50px;">
@@ -203,7 +227,7 @@ $("button").on("click",function(){
     </div>
 </div>
 
-<div id="div5" style="background-image:url('./images/backs/IMG_0755_2.JPG');" class="fulldiv">
+<div id="Contact" style="background-image:url('./images/backs/IMG_0755_2.JPG');" class="fulldiv">
     <div class="container">
 
 
