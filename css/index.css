@@ -11,7 +11,7 @@ html, body {
 	/*padding-left:250px;*/
 	min-height:100%;
 	
-	background-size: 100% 100%;
+	background-size: cover; /*100% 95%;*/
 	background-repeat: no-repeat;
 }
 
@@ -129,6 +129,19 @@ html, body {
 
 .btn {
 	margin-bottom:10px;
+	background-color: transparent;
+	border-color:#FFC575;
+	color:white;
+
+}
+.btn:hover{
+	background-color: #FFC575;
+	border-color:#FFC575;
+}
+.btn.active, .btn:active{
+	background-color: #FFC575;
+	border-color:#FFC575;
+	color:white;
 }
 
 .img-pan {

@@ -1,0 +1,30 @@
+/*
+By Joe Pettersson @ http://www.joepettersson.com
+
+Distriubted as part of the jQuery and PHP RSS Autoreloader, which
+in itself is distributor under the Creative Commons Attribution 3.0 Unported License.
+*/
+
+/***** Global Elements *****/
+html, body { border:0; margin:0; padding:0; }
+body { font:11px Arial, Helvetica, sans-serif; background: url(../img/page-background.png) repeat; line-height: 160%; color: #437182; }
+
+img { border:0;}
+a img { border:0 }
+
+a, a:link, a:visited { text-decoration:underline;}
+a:hover, :focus {text-decoration: none;}
+
+/***** Demo Elements *****/
+h1 {font-family: Georgia, Times New Roman, serif; font-weight: normal; font-style: italic; font-size: 12px; margin-bottom: 30px;}
+p {margin-top: 25px; }
+p a {color: #437182; font-size: 11px;}
+.wrapper { width:500px; margin:50px;}
+
+/* BEGIN Auto-updater Elements */
+#updateContainer {background: #bddee6; color: #437182; padding: 7px 12px 8px; width: auto;}
+#updateContainer a {color: #437182; text-decoration: none; border-bottom: 1px dotted #437182;}
+#updateContainer a:hover { border-bottom: 1px solid #437182;}
+/* End Auto-updater Elements */
+
+
