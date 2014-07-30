@@ -46,9 +46,9 @@ $(".title").arctext({radius:500});
     }, 10000); // Adjust this to the time interval you'd like between refreshes in milliseconds
 
 
-$("#newsbox").on("click", function(event){
+$("#news_btn").on("click", function(event){
 	event.preventDefault();
-	$("#news").css("width",$(this).width());
+	//$("#news").css("width",$(this).width());
 	$("#news").toggle("fade",300);
 });
 
@@ -64,7 +64,7 @@ $("#newsbox").on("click", function(event){
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand"><img src="./images/logo/logo.png" style="max-height:150px;margin-top:-100px;"/></a>
+      <a class="navbar-brand"><img src="./images/logo/junesucker_logo_nofish.png" style="max-height:150px;margin-top:-100px;"/></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -77,6 +77,7 @@ $("#newsbox").on("click", function(event){
                         </li>
         <li><a href="#" alt="Coming Soon" target="_blank"><img class="navimg" src="./images/social/twitter.png" /></a></li>
         <li><a href="http://instagram.com/junesuckercoffee" target="_blank"><img class="navimg" src="./images/social/instagram.png" /></a></li>
+        <li><a id="news_btn" href="#" target="_blank"><img class="navimg" src="./images/social/blog.png" /></a></li>
       </ul>
     </div>
 
@@ -128,7 +129,7 @@ $("#newsbox").on("click", function(event){
 </div>
 
 
-<div id="home" class="fulldiv" style="background-image:url('./images/backs/IMG_0763_2.PNG');">
+<div id="home" class="fulldiv" style="background-image:url('./images/backs/IMG_0763_2.JPG');">
 
   	
 	<div class="container">
