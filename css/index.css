@@ -28,7 +28,7 @@ html, body {
 #news {
 	display: none;
 	position:fixed;
-	/*width:200px;*/
+	width:300px;
 	height:100%;
 	top:60px;
 	right:0px;
