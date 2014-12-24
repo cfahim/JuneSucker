@@ -15,6 +15,7 @@
 <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
 <link rel="stylesheet" href="./css/bootstrap.min.css"/>
 <link rel="stylesheet" href="./css/index.css"/>
+<link rel="stylesheet" href="./css/jquery.fullPage.css"/>
 
 
 <!-- Latest compiled and minified JavaScript -->
@@ -24,21 +25,31 @@
 
 <script src="./js/jquery.arctext.js"></script>
 
+<script src="./js/jquery.fullPage.min.js"></script>
+
 
 <style>
 
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+.vertical-center {
+	position:relative;top:50%;transform:translateY(-50%);
+}
 
 </style>
 
 <script>
 $(document).ready(function() {
 
-
+/*
 $("button").on("click",function(){
 	$.scrollTo("#" + $(this).val(),500);
 });
-
-$(".title").arctext({radius:500});
+*/
 
     $("#rssUpdater").load("rssfeed.php"); // Grab the data on page-load
     var auto_refresh = setInterval(function(){
@@ -52,6 +63,17 @@ $("#news_btn").on("click", function(event){
 	$("#news").toggle("fade",300);
 });
 
+
+
+$(".title").arctext({radius:500});
+$("#fullpage").fullpage({
+	autoScrolling : true,
+	verticalCentered: true,
+	slidesNavigation: true,
+	slidesNavPosition: 'top',
+	menu : "#myMenu",
+});
+
 });
 
 </script>
@@ -60,12 +82,10 @@ $("#news_btn").on("click", function(event){
 
 <body>
 
-<nav class="navbar navbar-default navbar-inverse navbar-fixed-bottom visible-lg"  role="navigation" >
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-bottom"  style="background-color:black;" role="navigation" >
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand"><img src="./images/logo/junesucker_logo_nofish.png" style="max-height:150px;margin-top:-100px;"/></a>
-    </div>
+
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse">
@@ -78,33 +98,33 @@ $("#news_btn").on("click", function(event){
         <li><a href="#" alt="Coming Soon" target="_blank"><img class="navimg" src="./images/social/twitter.png" /></a></li>
         <li><a href="http://instagram.com/junesuckercoffee" target="_blank"><img class="navimg" src="./images/social/instagram.png" /></a></li>
         <li><a id="news_btn" href="#" target="_blank"><img class="navimg" src="./images/social/blog.png" /></a></li>
+        <li><a class="navbar-brand"><img src="./images/logo/junesucker_logo_nofish.png" style="max-height:150px;margin-top:-100px;"/></a></li>
       </ul>
     </div>
+
+
 
   </div><!-- /.container-fluid -->
 </nav>
 
 
-<div class="leftmenu visible-lg">
+
+<div class="leftmenu">
     <div>
-        <!-- <img src="./images/logo/junesucker_logo_white.png" style="max-width:200px;margin-left:3px;"/>	-->
         <img src="./images/logo/logolargewhite.png" style="max-width:190px;margin-left:3px;"/>
     </div>
-<!--
-    <div>
-        <img src="./images/logo/coffee_trans_white.png" style="max-width:150px;margin-left:25px;margin-top:-30px;">	
-    </div>	
-    -->
 
+<!--
     <div class="btn-group-vertical btn-group-lg" style="max-width:100px;margin-left:40px;margin-top:50px;">
         <button value="home" class="btn">Home</button>
-        <!-- <button value="SeeMore" class="btn">See More</button> -->
         <button value="AboutUs" class="btn">About Us</button>
         <button value="OurCoffee" class="btn">Our Coffee</button>
         <button value="Contact" class="btn">Contact</button>
     </div>
-	
+-->	
 </div>
+
+
 
 <!--
 <div id="newsbox">
@@ -128,54 +148,27 @@ $("#news_btn").on("click", function(event){
  
 </div>
 
+<div id="fullpage">
 
-<div id="home" class="fulldiv" style="background-image:url('./images/backs/IMG_0763_2.JPG');">
-
-  	
-	<div class="container">
-		<div class="fluid-row">
-		  <div class="col-md-6 col-md-offset-3" style="margin-top:150px;">
-			<img style="width:500px;margin-top:70px;" src="./images/logo/logolargewhite.png"/>
-		  </div>
+<div class="section">
+<div class="slide">
+	<div id="home" style="height:75%;background-image:url('./images/backs/IMG_0763_2.JPG');background-size: 100% auto;background-repeat:no-repeat;background-position:center;background-color:black;">
+	  	
+	  	<!--
+		<div class="container-fluid">
+			<div class="row-fluid">
+			  <div class="col-md-6 col-md-offset-4">
+				<img style="width:500px;margin-top:-100px;" src="./images/logo/logolargewhite.png"/>
+			  </div>
+			</div>
 		</div>
+		-->
 	</div>
-    	
-    	<!--
-    	<div class="row-fluid" style="margin-left:40px;">
-    		<div class="col-md-6 col-md-offset-3" >
-    			<img src="./images/backs/IMG_0630.JPG" class="img-pan"/>
-    			<img src="./images/backs/IMG_0631.JPG" class="img-pan"/>
-    			<img src="./images/backs/IMG_0631_2.JPG" class="img-pan"/>
-    			<img src="./images/backs/IMG_0633.JPG" class="img-pan"/>
-    			<img src="./logo.png" class="img-pan" style="max-width:100px;margin-left:27px;margin-right:28px;"/>
-    			<img src="./images/backs/IMG_0634.JPG" class="img-pan"/>
-    			<img src="./images/backs/IMG_0638.JPG" class="img-pan"/>
-    			<img src="./images/backs/IMG_0640.JPG" class="img-pan"/>
-    			<img src="./images/backs/IMG_0643.JPG" class="img-pan"/>
-    			
-    			<img src="./images/backs/IMG_0646.JPG" class="img-pan"/>
-
-    			<img src="./images/backs/IMG_0737.JPG" class="img-pan"/>
-    			<img src="./images/backs/IMG_0738.JPG" class="img-pan"/>
-    			<img src="./images/backs/IMG_0744.JPG" class="img-pan"/>
-    			
-    			<img src="./images/backs/IMG_0748(1).JPG" class="img-pan"/>
-    			<img src="./images/backs/IMG_0748.JPG" class="img-pan"/>
-    			<img src="./images/backs/IMG_0755.JPG" class="img-pan"/>
-    			<img src="./images/backs/IMG_0755_2.JPG" class="img-pan"/>
-    			<img src="./images/backs/IMG_0755_3.JPG" class="img-pan"/>
-    			<img src="./images/backs/IMG_0763.JPG" class="img-pan"/>
-    		</div>
-
-    	</div>
-    			-->
-	
-
-
 </div>
 
-
-<div id="SeeMore" style="background-image:url('./images/backs/IMG_0748_2.JPG'); display:none;" class="fulldiv">
+<!--
+<div class="section">
+<div id="SeeMore" style="background-image:url('./images/backs/IMG_0748_2.JPG'); display:none;">
 
 	<div class="container">
 
@@ -206,23 +199,31 @@ $("#news_btn").on("click", function(event){
 				</ul>
 			-->
 
+<!--
     		</div>
 
     	</div>
 	</div>
 
 </div>
+</div>
+-->
 
-<div id="AboutUs" style="background-image:url('./images/backs/IMG_0748_2.JPG');" class="fulldiv">
+<div class="slide" style="height:100%;">
+		
+			
+			<h1 style="color:white;font-family:blackjack;margin-left:200px;">
+				Suckers for good coffee
+			</h1>
+
+		
+<div id="AboutUs" style="height:75%;background-image:url('./images/backs/IMG_0748_2.JPG');background-size: 100% auto;background-repeat:no-repeat;background-position:center;background-color:black;">
 	<div class="container">
 
 
-    	<div class="row-fluid">
-    		<div class="col-md-8 col-md-offset-2" style="margin-top:50px;" >
-    		
+    	<div class="row">
+    		<div class="col-md-8 col-md-offset-2" style="margin-top:20px;" >
     			<div class="jumbotron">
-	    		 	<h1>Suckers for good coffee</h1>
-	    		 	<img class="pull-left" style="max-width:150px;" src="./images/aboutus.png"/>
 	    		 	<p>The June Sucker is a fish species native to Utah (specifically Utah Lake and Provo River). It is uniquely ours, but due to ecosystem alteration and mismanagement, June Suckers have become endangered. Now, thanks to targeted research and conservation efforts, populations of this local treasure are beginning to recover.
 					We are June Sucker Coffee simply because the June Sucker represents our commitment to our local community. We wish to provide customers a responsible, conscious cup of coffee by highlighting locally sourced and ethically produced goods, and by doing our part to protect, conserve, and enhance the vibrancy of our local environment and community.</p>
     			</div>
@@ -233,30 +234,39 @@ $("#news_btn").on("click", function(event){
     	</div>
 	</div>
 </div>
+</div>
 
 
-<div id="OurCoffee" style="background-image:url('./images/backs/IMG_0744_2.JPG');" class="fulldiv">
+<div class="slide">
+
+			<h1 style="color:white;font-family:blackjack;margin-left:200px;">
+				Our Coffee
+			</h1>
+<div id="OurCoffee" style="background-image:url('./images/backs/IMG_0744_2.JPG');background-size: 100% auto;background-repeat:no-repeat;background-position:center;background-color:black;">
     <div class="container">
         <div class="row-fluid">
         	<div class="col-md-8 col-md-offset-2" style="margin-top:50px;">
                 <div class="jumbotron">
-                    <h1>Our Coffee</h1>
-        	         <img class="pull-right" style="max-width:150px;" src="./images/products.png"/>
+        	         <img class="pull-right" style="max-width:120px;" src="./images/products.png"/>
         	          <p>We are dedicated to serving locally roasted single-origin, organic, fair trade, and DELICIOUS coffee, espresso, and brewed cocoa drinks.</p>
                 </div>
         	</div>
         </div>
     </div>
 </div>
+</div>
 
-<div id="Contact" style="background-image:url('./images/backs/IMG_0755_4.JPG');" class="fulldiv">
+<div class="slide">
+			<h1 style="color:white;font-family:blackjack;margin-left:200px;">
+				Contact Us
+			</h1>
+<div id="Contact" style="background-image:url('./images/backs/IMG_0755_4.JPG');background-size: 100% auto;background-repeat:no-repeat;background-position:center;background-color:black;">
     <div class="container">
 
 
         <div class="row-fluid">
             <div class="col-md-8 col-md-offset-2" style="margin-top:50px;">
                 <div class="jumbotron">
-                    <h1>Contact Us</h1>
                     <img class="pull-right" style="max-width:200px;" src="./images/logo/junesucker_logo_nofish.png"/>
                     <p>info@junesuckercoffee.com</p>
                     <p>801-897-8769</p>
@@ -285,6 +295,10 @@ $("#news_btn").on("click", function(event){
             </div>
         </div>
     </div>
+</div>
+</div>
+</div>
+
 </div>
 
 

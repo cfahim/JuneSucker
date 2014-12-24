@@ -1,6 +1,7 @@
 html, body {
 	height:100%;
 	width:100%;
+	background-color: black;
 
 }
 
@@ -19,10 +20,10 @@ html, body {
 .leftmenu {
 	position:fixed;
 	width:200px;
-	height:100%;
-	background-color:rgba(0, 0, 0, 0.5);
-	padding-top:20px;
-	z-index: 100;
+	
+	background-color:transparent;/*rgba(0, 0, 0, 0.5);*/
+	/*padding-top:10px;*/
+	z-index: 1;
 }
 
 #news {
@@ -120,6 +121,10 @@ html, body {
     margin: 0;
     padding: 0;
 
+}
+
+.jumbotron p {
+	font-size: 1.0vw;
 }
 
 .inlineList li {
